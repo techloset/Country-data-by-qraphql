@@ -20,6 +20,7 @@ const CountriesName = () => {
         <Pressable style={styles.countryContainer} onPress={() => navigation.navigate('CountriesInformation', {
             name: item.name, capital: item.capital, currency: item.currency,
             phone: item.phone, languages: item.languages, continent: item.continent,
+            emoji: item.emoji
         })}>
             <Text style={styles.countryName}>Country: {item.name}</Text>
             <Text style={styles.capital}>Capital: {item.capital}</Text>

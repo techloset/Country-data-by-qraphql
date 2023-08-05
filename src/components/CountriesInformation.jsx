@@ -11,7 +11,7 @@ const CountriesInformation = () => {
     const [getCountryName, { loading, error, data }] = useLazyQuery(GET_COUNTRIES);
 
     const route = useRoute();
-    const { name, capital, currency, phone, languages, continent } = route.params;
+    const { name, capital, currency, phone, languages, continent, emoji } = route.params;
 
     React.useEffect(() => {
         getCountryName();
@@ -49,6 +49,10 @@ const CountriesInformation = () => {
             <View style={styles.infoContainer}>
                 <Text style={styles.label}>Phone:</Text>
                 <Text style={styles.value}>{phone}</Text>
+            </View>
+            <View style={styles.infoContainer}>
+                <Text style={styles.label}>Emoji:</Text>
+                <Text style={styles.value}>{emoji}</Text>
             </View>
             <View style={styles.infoContainer}>
                 <Text style={styles.label}>Languages:</Text>
